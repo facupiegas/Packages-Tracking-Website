@@ -1,0 +1,203 @@
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript" src="Programa.js"></script>
+	</head>
+
+	<body body background="Fondo.jpg">
+		<div id="Logueo" align="center">
+			<h1>Sistema de Tracking de Paquetes</h1>
+			
+			<table border = "2" align=center>
+				<tr align=right><td>CI<input type="text" maxlength="8" size="10" id="txtCiUsuario"/></td></tr>
+
+				<tr align=center><td>Clave<input type="password" maxlength="10" size="10" id="txtClave"/></td></tr>
+
+				<tr align=center><td><input type="button" id="btnIngresar" value="Ingresar"/></td></tr>
+			</table>
+			<p id="pErrorLogin" style="color:red"></p>
+		</div>		
+
+		<div id="MenuOperador" class="menu">
+			<table align=center>
+				<tr><td align="right"><input type="button" value="Cerrar Sesión" align="right" style="color:red" id="btnCerrarSesion"/><br><br></td></tr>
+
+				<tr><td><h1>MENU OPERADOR</h1></td></tr>
+				
+				<tr align=center><td><input type="button" value="Alta Paquetes" id="btnMenuAltaPaquetes"/></td></tr>
+
+				<tr align=center><td><br><br><input type="button" value="Asignación Paquetes" id="btnMenuAsignacionPaquete"/></td></tr>
+
+				<tr align=center><td><br><br><input type="button" value="Cargar Estado" id="btnCargarEstado"/></td></tr>
+
+				<tr align=center><td><br><br><input type="button" value="Reportes" id="btnMenuReportes"/></td></tr>
+			</table>
+		</div>
+
+		<div id="AltaPaquetes">
+			<table align="center">
+				<tr align="center"><td><h1>ALTA PAQUETE</h1></td></tr>
+
+				<tr><td>DATOS REMITENTE<br><br></td></tr>
+
+				<tr align="right"><td>Nombre<input type="text" value="" id="txtNomRemitente" /></td></tr>
+
+				<tr align="right"><td>Apellido<input type="text" value="" id="txtApeRemitente"/><br></tr></td>
+
+				<tr align="right"><td>CI<input type="text" value="" maxlength="8" id="txtCiRemitente"/><br><br></td></tr>
+
+				<tr><td>DATOS DESTINATARIO<br><br></td></tr>
+
+				<tr align="right"><td>Nombre<input type="text" value="" id="txtNomDestinatario"/></td></tr>
+
+				<tr align="right"><td>Apellido<input type="text" value="" id="txtApeDestinatario"/><br></td></tr>
+
+				<tr align="right"><td>CI<input type="text" value="" maxlength="8" id="txtCiDestinatario"/></td></tr>
+
+				<tr align="right"><td>Dirección<input type="text" value="" id="txtDireccion"/></td></tr>
+
+				<tr align="right"><td>Peso<input type="text" value="" maxlength="4" id="txtPeso"/><br><br></td></tr>
+
+				<tr align="center"><td><input type="button" value="Volver" id="btnVolverAltaPaquete"/>
+				<input type="button" value="Guardar" id="btnGuardarPaquete"/></td></tr>.
+			</table>
+			<p id="pMensajesAltaPaquete" align="center" style="color:red"></p>
+			<p id="pOkLogin" align="center" style="color:green"></p>
+		</div>	
+
+		<div id="AsignacionEstadoPaquete">
+			<table align=center>
+				<tr align=center>
+				<td>
+				CARGA ESTADO A UN PAQUETE</FONT>
+				</br></br>
+				Ingrese Número de paquete <input type="text" value="" size="3" id="txtNumPaq"/>
+				<br><br>
+				<input type="button" value="Viajando" id="btnAsignarEstadoViajando"/>
+				<input type="button" value="Entregado" id="btnAsignarEstadoEntregado"/>
+				<br><br>
+				<input type="button" value="Volver" id="btnVolverCargaEstado">
+			</table>
+			<p id="pError" style="color:red" align="center"></p>
+			<p id="pOk" style="color:green" align="center"></p>
+		</div>
+
+		<div id="Reportes" class="menu">
+			<table align="center">
+	
+			<tr>
+			<td align="center">
+			<h1>REPORTES</h1>
+			<tr>
+			<td>
+			
+			<br>
+			<input type="button" value="Seguimineto de un Paquete" id="btnSeguimiento"/>
+			<br><br>
+			</td>
+			</tr>
+
+			<tr>
+			<td>
+			<input type="button" value="Resumen de entregas por Repartidor" id="btnResumenRepartidores"/>
+			<br><br>
+			</td>
+			</tr>
+
+			<tr>
+			<td>
+			<input type="button" value="Listado Paquetes Pendientes de Entrega" id="btnPaquetesPendientes"/>
+			</td>
+			</tr>
+
+			<tr>
+			<td align="center">
+			<br><br>
+			<input type="button" value="Volver" id="btnVolverReportes"/>
+			</td>
+			</tr>
+			</table>
+		</div>
+
+		<div id="MenuCliente" class="menu">
+
+			<table align="center">
+			<tr align="right">
+			<td>
+			<input type="button" value="Cerrar Sesión" style="color:red" id="btnCerrarSesion2"/>			
+			</tr>
+			</td>
+			<tr align="center">
+			<td>
+			<h1>MENU CLIENTE</h1> 
+			</tr>
+			</td>
+
+			<tr>
+			<td>
+			Ingrese Número de paquete <input type="text" size="3" value="" id="txtNumPaqCliente"/><br><br>
+			</tr>
+			</td>
+
+			<tr>
+			<td align="center">
+			<input type="button" value="Rastrear Paquete" id="btnRastrearPaqueteCliente"/>
+			</tr>
+			</td>
+			</table>
+			<div id="PaqueteBuscadoPorCliente" style="color:red" align="center"></div>
+		</div>
+
+		<div id="RastreoPaqueteOperario" class="menu">
+			<table align="center">
+				<tr align="center"><td><h1>RASTREO DE PAQUETE</h1></td></tr>
+
+				<tr><td>Ingrese Número de paquete <input type="text" value="" size="2" id="txtNumPaqOperaraio"/><br><br></td></tr>
+
+				<tr><td align="center"><input type="button" value="Volver" id="btnVolverRastreoPaqueteOperario"/><input type="button" value="Rastrear Paquete" id="btnRastrearPaqueteOperaraio"/></td></tr>
+			</table>
+			<br>
+			<div id="PaqueteRastreado" align="center" style="color:red"></div>
+		</div>
+
+		<div id="AsignarPaquetes" class="menu">
+			<table align="center">
+				<tr><td></td><td align="center"><h2>ASIGNACION DE PAQUETES</h2></td><td></td></tr><tr>
+
+				<td>Nº Paquete</td><td></h2></td><td>Repartidores</td></tr>
+
+				<tr><td><select id="selPaquetesPendientes" onchange="actualizoBoxRepartidores(this);"></select></td>
+					<td></td><td> <select id="selRepartidoresPendientes"></select></td></tr>
+
+				<tr><td><br><input type="button" value="Volver" id="btnVolverDesdeAsignar"/></td><td></td>
+				<td><br><input type="button" value="Asignar Paquete" id="btnAsignar" align="right" /></td></tr>
+			</table>
+			<p id="pErrorEstado" style="color:red" align="center"></p>
+			<p id="pOkEstado" style="color:green" align="center"></p>
+		</div>
+
+		<div id="MenuResumenRepartidores" class="menu">
+			<table align="center">
+				<tr align="center"><td><h1>RESUMEN DE ENTREGAS POR REPARTIDOR</h1></tr></td>
+
+				<tr align="center"><td>Ingrese Número de repartidor<input type="text" value="" size="2" id="txtNumRepartidor"/><br><br></td></tr>
+
+				<tr><td align="center"><input type="button" value="Volver" id="btnVolverResumenRepartidores"/>&nbsp&nbsp<input type="button" value="Rastrear Paquete" align="left" id="btnGenerarResumenRepartidor"/></td></tr>				
+			</table>
+			<br>
+			<div id="divResumenRepartidores" align="center" style="color:red"></div>
+		</div>
+
+		<div id="TablaPendientes" align="center">
+		</div>
+
+		<div id="MenuPendientesReportes" align="center">
+			<div id="TablaEnMenuReporte" align="center">
+			</div>
+			<br><br>
+			<input type="button" value="Volver" id="btnVolverDesdePendientes"/>
+		</div>
+
+	</body>
+</html>
